@@ -1,0 +1,17 @@
+<ul>
+	{{#each model.people as |person|}}
+		<li class="salutate">
+			{{#link-to 'people.person' person.id}}
+				Hello {{person.name}}
+			{{/link-to}}
+		</li>
+	{{/each}}
+	<li class="salutate2">
+		<a href="#" {{action 'incrementSalary'}}>Increment Salary</a>
+	</li>
+</ul>
+
+{{outlet}}
+<p class="totalS">
+The total salary is {{totalSalary}}
+</p>

@@ -1,0 +1,27 @@
+<br>
+<h2>		Workers		</h2>
+{{#each model.workers as |worker|}}
+	<p class="pagare">
+		{{#if worker.isFemale}}
+			<p style="color:#f442ce">
+				<strong style="color:black">Nombre: </strong>
+				{{worker.name}}
+			</p>
+		{{else}}
+			<p style="color:blue">
+				<strong style="color:black">Nombre: </strong>
+				{{worker.name}}
+			</p>
+		{{/if}}		
+		<strong>Sexo: </strong>
+		{{worker.sexo}}
+		<br>	 
+		<strong>Salario:</strong>
+		{{worker.salario}}
+		<p>:::::::::::::::::::::::::::::::::::::::::::::::::::::</p>		
+	</p>
+
+	
+{{/each}}
+
+{{outlet}}
